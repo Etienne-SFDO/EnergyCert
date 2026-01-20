@@ -1,0 +1,69 @@
+<template>
+    <div class="container">
+        <div class="header">
+            <h1>Energy Efficiency Rating</h1>
+        </div>
+
+        <div class="chart-table">
+            
+            <div class="chart-row header-row">
+                <div class="col-bands">
+                    <span class="sub-text">Very energy efficient - lower running costs</span>
+                </div>
+                <div class="col-score border-left"><strong>Current</strong></div>
+                <div class="col-score border-left"><strong>Potential</strong></div>
+            </div>
+
+            <template for:each={bands} for:item="band">
+                <div key={band.label} class="chart-row">
+                    
+                    <div class="col-bands">
+                        <div class={band.barClass} style={band.style}>
+                            <div class="band-left">
+                                <span class="range">{band.rangeText}</span>
+                            </div>
+                            
+                            <div class="band-right">
+                                <template if:true={band.showTargetMarker}>
+                                    <span class="target-marker">Target ▶</span> 
+                                </template>
+                                <span class="letter">{band.label}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-score border-left">
+                        <template if:true={band.showCurrentArrow}>
+                            <div class={band.arrowClass}>
+                                <span>{currentScore}</span>
+                            </div>
+                        </template>
+                    </div>
+
+                    <div class="col-score border-left">
+                        <template if:true={band.showPotentialArrow}>
+                            <div class={band.arrowClass}>
+                                <span>{potentialScore}</span>
+                            </div>
+                        </template>
+                    </div>
+
+                </div>
+            </template>
+
+            <div class="chart-row">
+                <div class="col-bands">
+                    <span class="sub-text">Not energy efficient - higher running costs</span>
+                </div>
+                <div class="col-score border-left footer-fill"></div>
+                <div class="col-score border-left footer-fill"></div>
+            </div>
+            
+        </div>
+        
+        <div class="footer-legend">
+            <strong>England & Wales</strong>
+            <!-- <div class="eu-logo">EU Directive<br>2002/91/EC</div> -->
+        </div>
+    </div>
+</template>

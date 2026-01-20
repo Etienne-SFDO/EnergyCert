@@ -1,0 +1,126 @@
+/* --- CONTAINER --- */
+.container {
+    background-color: white;
+    border: 2px solid #005eb8;
+    padding: 3px;
+    font-family: Arial, sans-serif;
+    max-width: 650px;
+    color: #000;
+}
+
+/* Header Blue Bar */
+.header {
+    background-color: #0070c0;
+    padding: 5px 10px;
+    color: white;
+    margin-bottom: 2px;
+}
+.header h1 { margin: 0; font-size: 1rem; font-weight: bold; }
+
+/* --- TABLE GRID --- */
+.chart-table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+}
+
+.chart-row {
+    display: flex;
+    align-items: stretch;
+    min-height: 38px; /* Consistent row height */
+}
+
+/* Col 1: Bands */
+.col-bands {
+    flex: 1;
+    padding: 2px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Col 2 & 3: Scores */
+.col-score {
+    width: 80px; /* Fixed width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.border-left { border-left: 2px solid #000; }
+
+.header-row .col-score {
+    align-items: flex-end;
+    padding-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+/* --- COLORED BANDS --- */
+.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.band-left { display: flex; align-items: center; }
+.band-right { display: flex; align-items: center; gap: 5px; }
+
+.range { font-size: 0.7rem; }
+.letter { font-size: 1.3rem; font-weight: 900; text-shadow: 1px 1px 1px rgba(0,0,0,0.3); }
+
+/* Target Marker (White Pill) */
+.target-marker {
+    background-color: white;
+    color: black;
+    font-size: 0.6rem;
+    padding: 1px 4px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* --- ARROWS --- */
+.arrow-shape {
+    color: white;
+    padding: 4px 5px 4px 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    width: 60px;
+    text-align: center;
+    
+    /* Left-Pointing Arrow */
+    clip-path: polygon(0% 50%, 20% 0%, 100% 0%, 100% 100%, 20% 100%);
+    -webkit-clip-path: polygon(0% 50%, 20% 0%, 100% 0%, 100% 100%, 20% 100%);
+}
+
+/* Band Colors */
+.band-a { background-color: #007f3e; }
+.band-b { background-color: #2b9e2b; }
+.band-c { background-color: #8cc63f; }
+.band-d { background-color: #fcee21; color: #000; }
+.band-e { background-color: #f4b55a; color: #000; }
+.band-f { background-color: #e6761b; }
+.band-g { background-color: #e2001a; }
+
+/* Fix text color for light bands */
+.arrow-shape.band-d, .arrow-shape.band-e,
+.band-d .letter, .band-e .letter { color: black; }
+
+/* --- FOOTER --- */
+.sub-text { font-size: 0.75rem; font-style: italic; color: #444; }
+.footer-fill { min-height: 20px; }
+.footer-legend {
+    margin-top: 5px; padding: 5px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.8rem; border-top: 2px solid #000;
+}
+.eu-logo {
+    font-size: 0.65rem; text-align: right; background-color: #003399; color: white;
+    padding: 2px 5px; font-weight: bold; border: 1px solid #000;
+}
