@@ -1,12 +1,19 @@
-# Created by Alastair Duttoin at Salesforce
+# What is this?
+A LWC to graphically display the energy rating for a property
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
-
-## What is this thing?
-A LWC to displauy the energy rating for a property
-
-## Configuration
+# Configuration
 Objects supported: any
 Fields required: 
     SAP_
     SAP_
+
+# Creator : Alastair Dutton at Salesforce
+
+# Owner: Alastair Dutton
+
+# Update History
+Etienne-SFDO: Will now correctly handle & display out of bound field values
+
+# To Do
+
+- add logic to create required fields (SAP_) at install time on the specified object. (Currently manual)
